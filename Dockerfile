@@ -6,7 +6,7 @@ apt install wget gcc g++ make flex bison xserver-xorg-dev unzip sudo software-pr
 add-apt-repository ppa:cybermax-dexter/sdl2-backport && \
 apt-get install libfaudio0 -y && \
 cd && \
-wget https://od.hlgmc.cn/wine/wine.zip && \
+wget https://od.hlgmc.cn/wine/wine-6.2.zip && \
 unzip wine.zip && \
 cd wine-5.9 && \
 make install && \
@@ -18,7 +18,7 @@ echo 'Asia/Shanghai' >/etc/timezone  && \
 useradd container
 USER container
 ENV USER=container HOME=/home/container
-ENV LANG zh_CN.UTF-8
+ENV LANG C.UTF-8
 WORKDIR /home/container
 COPY ./entrypoint.sh /entrypoint.sh
 CMD ["/bin/bash", "/entrypoint.sh"]
