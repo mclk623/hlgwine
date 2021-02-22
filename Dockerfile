@@ -7,11 +7,11 @@ add-apt-repository ppa:cybermax-dexter/sdl2-backport && \
 apt-get install libfaudio0 -y && \
 cd && \
 wget https://od.hlgmc.cn/wine/wine-6.2.zip && \
-unzip wine.zip && \
-cd wine-5.9 && \
+unzip wine-6.2.zip && \
+cd wine-6.2 && \
 make install && \
 cd && \
-rm -fr wine-5.9 && \
+rm -fr wine-6.2 && \
 wine64 --version && \
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 echo 'Asia/Shanghai' >/etc/timezone  && \
