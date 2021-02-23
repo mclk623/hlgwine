@@ -17,6 +17,8 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 echo 'Asia/Shanghai' >/etc/timezone  && \
 useradd container && \
 mkdir /home/container && \
+chown container /home && \
+chown container /home/container && \
 chmod 777 /home/container
 USER container
 ENV USER=container HOME=/home/container
