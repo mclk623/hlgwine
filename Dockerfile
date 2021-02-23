@@ -15,7 +15,9 @@ rm -fr wine-6.2 && \
 wine64 --version && \
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 echo 'Asia/Shanghai' >/etc/timezone  && \
-useradd container
+useradd container && \
+mkdir /home/container && \
+chmod 777 /home/container
 USER container
 ENV USER=container HOME=/home/container
 ENV LANG C.UTF-8
