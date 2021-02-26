@@ -18,11 +18,9 @@ echo 'Asia/Shanghai' >/etc/timezone  && \
 useradd container && \
 mkdir /home/container && \
 chown container /home && \
-chown container /home/container && \
-chmod 777 /home/container
+chown container /home/container
 USER container
 ENV USER=container HOME=/home/container
-ENV LANG C.UTF-8
 WORKDIR /home/container
 COPY ./entrypoint.sh /entrypoint.sh
 CMD ["/bin/bash", "/entrypoint.sh"]
