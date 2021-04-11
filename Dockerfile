@@ -1,7 +1,6 @@
 FROM ubuntu
 MAINTAINER Pterodactyl wine, <mclk623@163.com>
-RUN sed -i "s/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list && \
-apt update -y && \
+RUN apt update -y && \
 apt install wget gcc g++ make flex bison xserver-xorg-dev unzip sudo software-properties-common zip -y && \
 add-apt-repository ppa:cybermax-dexter/sdl2-backport && \
 apt-get install libfaudio0 -y && \
