@@ -6,9 +6,9 @@ apt install wget gcc g++ make flex bison xserver-xorg-dev unzip sudo software-pr
 add-apt-repository ppa:cybermax-dexter/sdl2-backport && \
 apt-get install libfaudio0 -y && \
 cd && \
-wget https://od.hlgmc.cn/wine/wine-6.3.zip && \
-unzip wine-6.3.zip && \
-cd wine-6.3 && \
+wget https://od.hlgmc.cn/?/wine/wine-6.2.zip && \
+unzip wine-6.2.zip && \
+cd wine-6.2 && \
 make install && \
 cd && \
 rm -fr * && \
