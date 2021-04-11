@@ -11,6 +11,7 @@ cd wine-6.2 && \
 make install && \
 cd && \
 rm -fr * && \
+ls && \
 wine64 --version && \
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 echo 'Asia/Shanghai' >/etc/timezone  && \
